@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Portfolio v1.0 | Cybersecurity & AI</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-background": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "primary": "#000000",
+                        "secondary": "#5f5e5e",
+                        "surface-container": "#eeeeee",
+                        "outline-variant": "#cfc4c5",
+                    },
+                    spacing: {
+                        "container-max": "1120px",
+                        "gutter": "24px",
+                        "section-gap": "100px" // Slightly increased for that "premium" breathing room
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hero-gradient { background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(26,28,28,1) 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-sans antialiased">
+
+    <!-- NAVIGATION: Now with actual functional links -->
+    <nav class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant h-20">
+        <div class="max-w-container-max mx-auto px-6 flex justify-between items-center h-full">
+            <div class="text-xl font-bold tracking-tighter">PORTFOLIO_v1.0</div>
+            
+            <ul class="hidden md:flex items-center gap-10 text-xs font-medium uppercase tracking-widest">
+                <li><a class="border-b-2 border-primary pb-1" href="index.html">Home</a></li>
+                <li><a class="text-secondary hover:text-primary transition-colors" href="work.html">Projects</a></li>
+                <li><a class="text-secondary hover:text-primary transition-colors" href="about.html">About</a></li>
+            </ul>
+
+            <button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase tracking-tighter hover:bg-neutral-800 transition-all">
+                Resume
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO SECTION: Matches the dark, technical vibe of {C28C72F9-3F54-47D4-B195-21A05AF8F16A}.png -->
+        <section class="relative min-h-[90vh] flex items-center justify-center bg-[#1a1c1c] text-white">
+            <div class="absolute inset-0 opacity-40">
+                <img alt="Technical Network" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070"/>
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+            
+            <div class="relative z-10 text-center space-y-8 px-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-white/20 bg-white/5 text-xs uppercase tracking-widest">
+                    <span class="material-symbols-outlined text-sm">verified</span> Available for Hire
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight max-w-4xl mx-auto">
+                    Aspiring Cybersecurity & <br/> AI Professional
+                </h1>
+                <p class="text-lg text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+                    Building secure systems and intelligent solutions for the future. Specializing in threat detection and neural network optimization.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center pt-4">
+                    <a href="work.html" class="bg-white text-black px-8 py-4 rounded font-bold flex items-center justify-center gap-2 hover:bg-neutral-200 transition-all">
+                        Explore My Work <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERTISE: Clean, Grid-based Layout -->
+        <section class="py-24 max-w-container-max mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-8">
+                <div>
+                    <span class="text-xs font-bold text-neutral-400 uppercase tracking-[0.3em] block mb-2">Core Expertise</span>
+                    <h2 class="text-4xl font-bold">Technical Foundation</h2>
+                </div>
+                <p class="text-neutral-500 max-w-md text-lg">
+                    Bridging the gap between robust infrastructure and adaptive intelligence with precision-engineered code.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill Card -->
+                <article class="p-10 border border-neutral-200 bg-white hover:border-black transition-all group">
+                    <div class="w-12 h-12 bg-black text-white flex items-center justify-center mb-8">
+                        <span class="material-symbols-outlined">security</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Cybersecurity</h3>
+                    <p class="text-neutral-600 mb-8">Implementing zero-trust architectures and advanced encryption protocols.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] font-mono bg-neutral-100 px-2 py-1 uppercase">AES-256</span>
+                        <span class="text-[10px] font-mono bg-neutral-100 px-2 py-1 uppercase">Pentesting</span>
+                    </div>
+                </article>
+                <!-- Repeat for other skills... -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-neutral-200 py-12">
+        <div class="max-w-container-max mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="font-bold tracking-tighter">CS_ARCHITECT</div>
+            <div class="flex gap-8 text-[10px] font-mono uppercase tracking-widest text-neutral-500">
+                <a href="#" class="hover:text-black">GitHub</a>
+                <a href="#" class="hover:text-black">LinkedIn</a>
+                <a href="#" class="hover:text-black">Email</a>
+            </div>
+            <div class="text-[10px] font-mono text-neutral-400">© 2026 BUILT WITH PRECISION</div>
+        </div>
+    </footer>
+</body>
+</html>
