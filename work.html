@@ -1,132 +1,36 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Selected Projects | CS_ARCHITECT</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "on-background": "#1a1c1c",
-                        "background": "#f9f9f9",
-                        "primary": "#000000",
-                        "secondary": "#5f5e5e",
-                        "outline-variant": "#cfc4c5",
-                    },
-                    spacing: {
-                        "container-max": "1120px",
-                        "section-gap": "100px",
-                    },
-                    fontFamily: {
-                        "sans": ["Inter", "sans-serif"],
-                        "mono": ["JetBrains Mono", "monospace"],
-                    }
-                },
-            },
-        }
-    </script>
-    <style>
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-background text-on-background font-sans antialiased">
-
-    <!-- NAVIGATION: Corrected linking structure -->
-    <nav class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant h-20">
-        <div class="max-w-container-max mx-auto px-6 flex justify-between items-center h-full">
-            <div class="text-xl font-bold tracking-tighter">PORTFOLIO_v1.0</div>
-            
-            <ul class="hidden md:flex items-center gap-10 text-[11px] font-semibold uppercase tracking-widest">
-                <li><a class="text-secondary hover:text-primary transition-colors" href="index.html">Home</a></li>
-                <li><a class="text-primary border-b-2 border-primary pb-1" href="work.html">Projects</a></li>
-                <li><a class="text-secondary hover:text-primary transition-colors" href="about.html">About</a></li>
+<body>
+    <header class="sticky top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant h-20">
+        <nav class="max-w-[1120px] mx-auto px-6 flex justify-between items-center h-full">
+            <div class="text-xl font-extrabold tracking-tighter">PORTFOLIO_v1.0</div>
+            <ul class="hidden md:flex items-center gap-10">
+                <li><a class="nav-link text-secondary" href="index.html">Home</a></li>
+                <li><a class="nav-link nav-link-active" href="work.html">Projects</a></li>
+                <li><a class="nav-link text-secondary" href="about.html">About</a></li>
             </ul>
+            <button class="btn-primary">Resume</button>
+        </nav>
+    </header>
 
-            <button class="bg-primary text-white px-6 py-2 rounded text-[11px] font-bold uppercase tracking-tighter hover:bg-neutral-800 transition-all">
-                Resume
-            </button>
-        </div>
-    </nav>
-
-    <main class="max-w-container-max mx-auto px-6 py-24">
-        <!-- HEADER: Matching the display typography from the mockup -->
-        <header class="mb-24">
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">Selected Projects</h1>
-            <div class="h-1.5 w-24 bg-primary mb-10"></div>
-            <p class="text-xl text-secondary max-w-2xl leading-relaxed">
-                A curated selection of technical challenges, architectural implementations, and software engineering solutions.
-            </p>
-        </header>
-
-        <!-- PROJECT GRID: Using semantic article tags and improved spacing -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-            
-            <!-- Featured Large Card (article) -->
-            <article class="md:col-span-8 group border border-outline-variant bg-white overflow-hidden transition-all hover:shadow-xl">
-                <div class="aspect-video overflow-hidden bg-neutral-200">
-                    <img alt="Nebula Engine Interface" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=2070"/>
-                </div>
-                <div class="p-10">
-                    <div class="flex gap-3 mb-6">
-                        <span class="text-[10px] font-mono bg-neutral-100 px-3 py-1.5 uppercase font-bold tracking-wider">Rust</span>
-                        <span class="text-[10px] font-mono bg-neutral-100 px-3 py-1.5 uppercase font-bold tracking-wider">Distributed</span>
-                    </div>
-                    <h2 class="text-3xl font-bold mb-4">Nebula Engine v2</h2>
-                    <p class="text-secondary text-lg mb-10 leading-relaxed">
-                        A high-performance distributed computing engine designed for real-time data processing across edge nodes.
-                    </p>
-                    <div class="flex gap-4">
-                        <a href="#" class="bg-black text-white px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-neutral-800 transition-all">View Project</a>
-                        <a href="#" class="border border-black px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-neutral-50 transition-all">GitHub</a>
-                    </div>
-                </div>
+    <main class="max-w-[1120px] mx-auto px-6 py-24">
+        <h1 class="text-6xl font-extrabold mb-20 tracking-tighter">Work.</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <article class="card-border p-10">
+                <span class="mono-tag mb-6 inline-block">Distributed Systems</span>
+                <h2 class="text-3xl font-bold mb-4">Nebula Engine</h2>
+                <p class="text-secondary mb-8">A high-performance computing cluster implementation using Rust.</p>
+                <a href="#" class="nav-link border-b border-black">View Case Study</a>
             </article>
-
-            <!-- Sidebar Card (article) -->
-            <article class="md:col-span-4 border border-outline-variant bg-white flex flex-col hover:shadow-xl transition-all group">
-                <div class="aspect-[4/5] overflow-hidden bg-neutral-200">
-                    <img alt="Neural Network Visualization" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=2070"/>
-                </div>
-                <div class="p-8">
-                    <div class="flex gap-3 mb-4">
-                        <span class="text-[10px] font-mono bg-neutral-100 px-2 py-1 uppercase font-bold">PyTorch</span>
-                    </div>
-                    <h2 class="text-2xl font-bold mb-3">Lexicon-AI</h2>
-                    <p class="text-secondary mb-8">Neural semantic analyzer for code documentation.</p>
-                    <a href="#" class="text-xs font-bold uppercase tracking-widest border-b border-black pb-1 hover:text-neutral-500 transition-all inline-block">Explore Case Study</a>
-                </div>
-            </article>
-
-        </div>
-
-        <!-- LOAD MORE: Refined UI -->
-        <div class="mt-24 flex justify-center">
-            <button class="group flex items-center gap-4 border-2 border-primary px-16 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all">
-                Load More Archives
-                <span class="material-symbols-outlined transition-transform group-hover:translate-y-1">expand_more</span>
-            </button>
         </div>
     </main>
-
-    <!-- FOOTER -->
-    <footer class="border-t border-outline-variant py-16 bg-white">
-        <div class="max-w-container-max mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-xl font-bold tracking-tighter">CS_ARCHITECT</div>
-            <div class="flex gap-10 text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-secondary">
-                <a class="hover:text-primary transition-colors" href="#">Email</a>
-                <a class="hover:text-primary transition-colors" href="#">GitHub</a>
-                <a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
-            </div>
-            <div class="text-[10px] font-mono text-neutral-400 font-medium">
-                © 2026 CS_ARCHITECT. BUILT WITH PRECISION.
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
